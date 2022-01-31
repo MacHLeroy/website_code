@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ML Baseball Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    .bgimg {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('https://mackenzyeleroyds.w3spaces.com/baseball_photo.jpeg');
+      min-height: 100%;
+
+    }
+
+  .overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+  }
+
+  .container:hover .overlay {
+  opacity: 1;
+  }
+    </style>
+  </head>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+  <div class="overlay">My Name is John</div>
+  </div>  
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="https://mackenzye-leroy.com/index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Baseball Projects</a>
+    <a href="https://mackenzye-leroy.com/capstone.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Capstone Project</a>
+    <a href="https://mackenzye-leroy.com/basketballproject.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Bayesian Basketball</a>
+    <a href="https://mackenzye-leroy.com/coursework.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Coursework</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:24px 16px" id="home">
+    <h1 class="w3-jumbo"><b>Baseball</b></h1>
+    <p>When I was about 10-years-old, my sister gave me a book on the Baseball Hall of Fame for Christmas. I absolutely devoured it. I memorized the players, the stories, and most
+      of all-the stats. I know, a kid who loved baseball stats and now loves data, how original? Still, there's something beautiful about the amount of data 
+      out there on this simple game, and even as I've branched in to many other fields, I often find myself coming back to baseball and asking new questions. Below you'll find
+      some projects that grew out of a few of these questions. 
+    </p>
+    <!---Image?-->
+  </header>
+
+  <!-- Projects Section -->
+
+  <div class="w3-padding-32 w3-content" id="dashboard">
+    <h2 class="w3-text-black">Dashboard</h2>
+    <hr class="w3-opacity">
+    
+    
+    <img src = "https://mackenzye-leroy.com/dashboard2.png"  class = "w3-image" width = "1000" >
+   
+      <p> After scraping the results of every baseball game going back to 1900 and figuring out every teams' regular series win percentage
+        (see project below for more information), I wanted to build a simple way to share the data I had compiled with the world. 
+        To me, the clearest way to share data is to make it fun and easy to visualize, so I used streamlit to build an interactive dashboard.
+        I then deployed said dashboard on AWS. I hope you enjoy playing around with the final product below!
+        
+         <p>
+    <a href="http://52.14.213.53:8501/" target = "_blank">
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-link"></i> Dashboard
+    </button>
+    </a>
+    <a href="https://github.com/MacHLeroy/MLBSeriesProject/blob/main/Dashboard.py" target = "_blank">
+      <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-link"></i> Code 
+    </button>
+    </a>
+
+
+  <div class="w3-padding-32 w3-content" id="scraper">
+    <h2 class="w3-text-black">Game Scraper</h2>
+    <hr class="w3-opacity">
+    <img src = "https://mackenzye-leroy.com/baseball-reference-screenshot.png"  class = "w3-image" width = "1000" >
+    
+    <p> This project started with what I thought would be a fairly simple question to answer--which teams in MLB history 
+      have won the highest percentage of their regular season series? Unfortunately, I was unable to find any sources that tracked 
+      regular season series success of MLB teams directly. So, using beautifulsoup, I scraped the result of every baseball game going back to 
+      1900 from Baseball-Reference's website, compiled and cleaned the results, and then wrote a function to calculate each team's
+      regular season series win percentage. Below you can find a notebook walking through my code for scraping, cleaning, and compiling the data,
+      and above you can find a dashboard I built out of the resulting data.<p>
+    <a href = "https://colab.research.google.com/drive/199UbuzfVVwhwmNZfiqkorwq0hcC59r57" target = "_blank">
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-link"></i> Code
+    </button>
+    </a>
+  
+
+  <div class="w3-padding-32 w3-content" id="foreignSubstances">
+    <h2 class="w3-text-black">Foreign Substances</h2>
+    <hr class="w3-opacity">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src = "https://mackenzye-leroy.com/strikeouts_hits_ratio.png"  class = "w3-image" width = "1000" >
+
+      </div>
+      <div class="w3-half">
+        <img src = "https://mackenzye-leroy.com/spin_rate_by_month.png"  class = "w3-image" width = "1000" >
+      
+      </div>
+    </div>
+    
+    <p> This was a group final project undertaken for Programming for Data Scientists as part of the 
+      UVA MSDS program. I worked with Stephen Whetzel and Jason Wang to explore baseball's latest controversy--the use 
+      of sticky foreign substances by pitchers to increase the spin rate of their pitches. We explored how the league as a whole
+      as well as individual teams and players reacted to Major League Baseball's crackdown on the use of said substances. <p>
+    <a href = "https://mackenzye-leroy.com/foreign_substances_paper.pdf" download>
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Paper
+    </button>
+    </a>
+    <a href = "https://colab.research.google.com/drive/1l614EMqxdJEw_M2mtuRcSRVzzh6qxqCJ?usp=sharing" target = "_blank">
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-link"></i> Code
+    </button>
+    </a>
+
+  <!-- End Projects Section -->
+  </div>
+
+
+
+  <!-- Contact Section -->
+  
+  <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-48px">
+    <p><a href = "https://www.linkedin.com/in/mackenzye-leroy" target="_blank"> <i class="fa fa-linkedin fa-fw w3-xxlarge w3-hover-text-gray w3-margin-middle"></i></a>
+    <a href = "https://github.com/MacHLeroy" target="_blank"> <i class="fa fa-github fa-fw w3-xxlarge w3-hover-text-gray w3-margin-middle"></i></a>
+    <a href = "mailto:mackenzyeleroy@gmail.com" target="_blank"> <i class="fa fa-envelope fa-fw w3-xxlarge w3-hover-text-gray w3-margin-middle"></i></a></p>
+    <!-- End footer -->
+  </footer>
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

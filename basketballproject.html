@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bayesian Basketball Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    .bgimg {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('https://mackenzye-leroy.com/basketball2.png');
+      min-height: 100%;
+    }
+    </style>
+  </head>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+  </div>  
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="https://mackenzye-leroy.com/index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="https://mackenzye-leroy.com/baseballprojects.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Baseball Projects</a>
+    <a href="https://mackenzye-leroy.com/capstone.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Capstone Project</a>
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Bayesian Basketball</a>
+    <a href="https://mackenzye-leroy.com/coursework.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Coursework</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <!-- Header -->
+  <header class="w3-container w3-center" style="padding:24px 16px" id="home">
+    <h1 class="w3-jumbo"><b>Bayesian Basketball</b></h1>
+    <p>Exploring Hierarchical Regression Models on NBA Shot Log Data</p>
+    <!---Image?-->
+  </header>
+
+  <!-- Projects Section -->
+  <div class="w3-padding-32 w3-content" id="foreignSubstances">
+    <hr class="w3-opacity">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half">
+        <img src = "https://mackenzye-leroy.com/ShotLog.png"  class = "w3-image" width = "1000" >
+
+      </div>
+      <div class="w3-half">
+        <img src = "https://mackenzye-leroy.com/baketball-model.png"  class = "w3-image" width = "1000" >
+      
+      </div>
+    </div>
+    
+    <p> This was a group final project undertaken for Bayesian Machine Learning as part of the 
+      UVA MSDS program.
+    Along with Edwin Purcell and Will McDevitt, I used NBA shot log data from the 2016-2017 season (<a href = "https://www.kaggle.com/wh0801/NBA-16-17-regular-season-shot-log" target = "_blank">Kaggle</a>)
+    to explore how well we could predict shot outcome (make versus miss) using Bayesian regression methods. We explored how well 
+    pooled, unpooled, and hierarchical models predicted shot outcome for both the Cleveland Cavaliers and Houston Rockets in the 2016-2017 season. 
+    For each model, we used both Variational Inference and Monte-Carlo Sampling to find the posterior distribution for each team and then compared the 
+    results across all models and teams. A paper summarizing our methods and results as well as a notebook walking through our code can be found below.
+
+      <p>
+
+    <a href="https://mackenzye-leroy.com/BayesFinalReport.pdf" download>
+     <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Paper
+    </button>
+    </a> 
+    <a href="https://colab.research.google.com/drive/1vsfEC97jMh_P3chrEr86Et5p2b2ZvOR8?usp=sharingy" target = "_blank">
+      <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-link"></i> Code  
+    </button>
+    </a>
+    
+
+  <!-- End Projects Section -->
+  </div>
+
+  
+  
+  <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-20px">
+    <p><a href = "https://www.linkedin.com/in/mackenzye-leroy" target="_blank"> <i class="fa fa-linkedin fa-fw w3-xxlarge w3-hover-text-gray w3-margin-middle"></i></a>
+    <a href = "https://github.com/MacHLeroy" target="_blank"> <i class="fa fa-github fa-fw w3-xxlarge w3-hover-text-gray w3-margin-middle"></i></a>
+    <a href = "mailto:mackenzyeleroy@gmail.com" target="_blank"> <i class="fa fa-envelope fa-fw w3-xxlarge w3-hover-text-gray w3-margin-middle"></i></a></p>
+    <!-- End footer -->
+  </footer>
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ML Coursework</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    .bgimg {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('https://mackenzye-leroy.com/UVA_Rotunda_logo.svg');
+      min-height: 70%;
+    }
+    </style>
+  </head>
+<body>
+
+<!-- Sidebar with image -->
+<nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%">
+  <div class="bgimg"></div>
+    
+    <h1 class="w3-jumbo"><b>Graduate Coursework</b></h1>
+    
+  </div>  
+</nav>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-black w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-black w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="https://mackenzye-leroy.com/index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Home</a>
+    <a href="https://mackenzye-leroy.com/baseballprojects.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Baseball Projects</a>
+    <a href="https://mackenzye-leroy.com/capstone.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Capstone Project</a>
+    <a href="https://mackenzye-leroy.com/basketballproject.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Bayesian Basketball Project</a>
+    <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black" onclick="closeNav()">Coursework</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-white w3-xxlarge w3-text-grey w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <img src="https://mackenzye-leroy.com/UVA_Rotunda_logo.svg" class="w3-image w3-hide-large w3-hide-small w3-round" style="display:block;width:50%;margin:auto;">
+
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="coursework">
+    <!-- Coursework Section-->
+    <h2 class= "w3-text-black">Spring 2022</h2>
+
+
+    <p><span class="w3-large w3-text-black w3-margin-right">Exploratory Text Analytics</span></p>
+    <p>Introduction to text analytics with a focus on long-form documents, such as reviews, news articles, 
+      and novels. Students convert source texts into structure-preserving analytical form and then apply information theory,
+       NLP tools, and vector-based methods to explore language models, topic models, sentiment analyses, and narrative 
+       structures. The focus is on unsupervised methods to explore cognitive and social patterns in texts.</p> 
+
+    <p><span class="w3-large w3-text-black w3-margin-right">Deep Learning</span></p>
+    <p>This course will focus on Spark, an open-source, general-purpose computing framework that is scalable & fast. 
+      Fundamental data types & concepts are covered. You will learn how to use Spark for large-scale analytics & 
+       machine learning, among other topics. Tools for data storage and retrieval are covered, including AWS.</p>
+
+    <p><span class="w3-large w3-text-black w3-margin-right">Big Data Systems</span></p>
+    <p>A graduate-level course on deep learning fundamentals and applications with emphasis on their broad 
+      applicability to problems across a range of disciplines. Topics include regularization, optimization, 
+      convolutional networks, sequence modeling, generative learning, instance-based learning, and deep reinforcement 
+      learning.</p>
+
+    <p><span class="w3-large w3-text-black w3-margin-right">Data Visualization (Audit) </span></p>
+    <p>Thinking with Images. People have been looking at data for centuries -- with their eyes -- to discover patterns,
+       meaning, and insight into the most important challenges of their time. This course teaches visual and spatial thinking
+        coupled with visual data tools and interactive web coding to envision information. Far beyond plotting, finding ways 
+        to respond to complex problems, we will study and make useful, compelling, and beautiful tools to see.</p>  
+    
+    <br>
+    <br>
+
+    <h2 class= "w3-text-black">Fall 2021</h2>
+
+    <p><span class="w3-large w3-text-black w3-margin-right">Foundations of Computer Science</span></p>
+    <p>Provide a foundation in discrete mathematics, data structures, algorithmic design and implementation,
+       computational complexity, parallel computing, and data integrity and consistency for non-CS, non-CpE students.
+        Case studies and exercises will be drawn from real-world examples (e.g., bioinformatics, public health, marketing,
+         and security).</p>
+
+    <p><span class="w3-large w3-text-black w3-margin-right">Ethics of Big Data</span></p>
+    <p>This course examines the ethical issues arising around big data and provides frameworks, context, concepts, and 
+      theories to help students think through and deal with the issues as they encounter them in their professional lives.</p>
+
+    <p><span class="w3-large w3-text-black w3-margin-right">Statistical Learning</span></p>
+    <p>This course covers fundamentals of data mining and machine learning within a common statistical framework. 
+      Topics include regression, classification, clustering, resampling, regularization, tree-based methods, ensembles,
+       boosting, and Support Vector Machines.</p>
+
+    <p><span class="w3-large w3-text-black w3-margin-right">Bayesian Machine Learning</span></p>
+    <p>Bayesian inferential methods provide a foundation for machine learning under conditions of uncertainty. 
+      Bayesian machine learning techniques can help us to more effectively address the limits to our understanding of 
+      world problems. This class covers the major related techniques, including Bayesian inference, conjugate prior 
+      probabilities, naive Bayes classifiers, expectation maximization, Markov chain monte carlo, and variational inference.</p>
+    
+    <br>
+    <br>
+
+    <h2 class= "w3-text-black">Summer 2021</h2>
+
+
+    <p><span class="w3-large w3-text-black w3-margin-right">Linear Models for Data Science</span></p>
+    <p>An introduction to linear statistical models in the context of data science. Topics include simple and multiple 
+      linear regression, generalized linear models, time series, analysis of covariance, tree-based classification, and
+       principal components.</p>
+   
+    <p><span class="w3-large w3-text-black w3-margin-right">Programming for Data Science</span></p>
+    <p>An introduction to essential programming concepts, structures, and techniques. Students will gain confidence 
+      in not only reading code, but learning what it means to write good quality code. Additionally, essential and 
+      complementary topics are taught, such as testing and debugging, exception handling, and an introduction to visualization.</p>
+    
+    <p><span class="w3-large w3-text-black w3-margin-right">Practice and Applications of Data Science</span></p>
+    <p>An introduction to essential programming concepts, structures, and techniques. Students will gain confidence in not only 
+      reading code, but learning what it means to write good quality code. Additionally, essential and complementary topics are 
+      taught, such as testing and debugging, exception handling, and an introduction to visualization. This course is project based,
+       consisting of a semester project and final project presentations.</p>
+    
+  <!-- End Course Section -->
+ </div>
+
+  
+  <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <p><a href = "https://www.linkedin.com/in/mackenzye-leroy" target = "_blank"> <i class="fa fa-linkedin fa-fw w3-xxlarge w3-hover-text-gray w3-margin-middle" ></i></a>
+    <a href = "https://github.com/MacHLeroy" target = "_blank"> <i class="fa fa-github fa-fw w3-xxlarge w3-hover-text-gray w3-margin-middle"></i></a>
+    <a href = "mailto:mackenzyeleroy@gmail.com" target = "_blank"> <i class="fa fa-envelope fa-fw w3-xxlarge w3-hover-text-gray w3-margin-middle"></i></a></p>
+    <!-- End footer -->
+  </footer>
+<!-- END PAGE CONTENT -->
+</div>
+
+<script>
+// Open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.width = "60%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
